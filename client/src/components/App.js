@@ -8,8 +8,8 @@ import {
 
 import Home from './Home.js';
 import Favorites from './Favorites.js';
-import About from './About.js';
-import Post from './Post';
+import Weather from './Weather.js';
+import Blog from './Blog';
 
 class App extends Component {
   render() {
@@ -18,14 +18,14 @@ class App extends Component {
         <div className="App">
           <nav>
             <Link to='/'>Home</Link>
-            <Link to='/post'>Post</Link>
+            <Link to='/blog'>Blog</Link>
             <Link to='/favorites'>Favorites</Link>
-            <Link to='/about'>About</Link>
+            <Link to='/Weather'>Weather</Link>
           </nav>
           <Route exact path='/' component={Home} />
-          <Route path='/post' component={Post} />
+          <Route path='/blog' component={Blog} />
           <Route path='/favorites' component={Favorites} />
-          <Route path='/about' component={About} />
+          <Route path='/Weather' component={Weather} />
         </div>
       </Router>
     );

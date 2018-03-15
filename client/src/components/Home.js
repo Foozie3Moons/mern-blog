@@ -15,16 +15,16 @@ class Home extends Component {
     // the url for our api
     let poemApi = 'http://ShakeItSpeare.com/api/poem'
     // our fetch of that poemApi using ES6
-    fetch(poemApi)
-      .then((response) => {
-        return response.json()
-      })
-      .then((json) => {
-        this.setState({ shakespeare: json.poem })
-      })
-      .catch((error) => {
-        console.log('An error occurred while parsing!', error)
-      })
+    // fetch(poemApi)
+    //   .then((response) => {
+    //     return response.json()
+    //   })
+    //   .then((json) => {
+    //     this.setState({ shakespeare: json.poem })
+    //   })
+    //   .catch((error) => {
+    //     console.log('An error occurred while parsing!', error)
+    //   })
     // One way of using axios
     axios.get(poemApi)
       .then((response) => {

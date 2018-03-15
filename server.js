@@ -27,14 +27,10 @@ app.get('/api/posts', (req, res) => {
 });
 
 app.post('/api/post', (req, res) => {
-  // if (!req.body) return res.sendStatus(400);
-
   Post.create({
     title: req.body.title,
     content: req.body.content
   }, (err, post) => {
-    // res.send(message: {'Posted:', post})
-    // res.send('success');
     res.status(200).send(post)
   })
 })
